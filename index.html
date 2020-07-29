@@ -1,0 +1,371 @@
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+
+	h1 {
+		font-weight:300;
+	}
+
+	.disclaimerbox {
+		background-color: #eee;
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		        15px 15px 0 0px #fff, /* The fourth layer */
+		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		        20px 20px 0 0px #fff, /* The fifth layer */
+		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		        25px 25px 0 0px #fff, /* The fifth layer */
+		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0px #fff, /* The second layer */
+		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+
+	.vert-cent {
+		position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+	}
+
+	hr
+	{
+		border: 0;
+		height: 1.5px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+
+	p.small {
+		font-size: 12px
+	}
+</style>
+
+<html>
+  <head>
+		<title>Action2Motion: Conditioned Generation of 3D Human Motions</title>
+<!-- 		<meta property="og:image" content="http://people.eecs.berkeley.edu/~tinghuiz/projects/mpi/images/teaser.png"/>
+		<meta property="og:title" content="Stereo Magnification: Learning View Synthesis using Multiplane Images" /> -->
+  </head>
+
+  <body>
+    <br>
+    <center>
+    <span style="font-size:36px">Action2Motion: Conditioned Generation of 3D Human Motions</span>
+	</center>
+    
+	<br>
+  	<table align=center width=900px>
+  	 <tr>
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px">Chuan Guo</a></span>
+		</center>
+		</td>
+
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px"><a href="https://sites.google.com/site/xinxinzuohome/home">Xinxin Zuo</a></span>
+		</center>
+		</td>
+
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px"><a href="https://sites.google.com/site/senwang1312home/">Sen Wang</a></span>
+		</center>
+		</td>
+
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px"><a href="https://jimmyzou.github.io/">Shihao Zou</a></span>
+		</center>
+		</td>
+
+
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px">Qingyao Sun<sup>*</sup></a></span>
+		</center>
+		</td>
+	</tr>
+	
+	<table align=center width=700px>
+  	 <tr>		
+  	 	<td align=center width=100px>
+		<center>
+		<span style="font-size:20px">Anan Deng<sup>*</sup></a></span>
+		</center>
+		</td>
+
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px"><a href="http://www.cs.mun.ca/~gong/">Minglun Gong</a></span>
+		</center>
+		</td>
+
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:20px"><a href="https://www.ece.ualberta.ca/~lcheng5/">Li Cheng</a></span>
+		</center>
+		</td>
+
+	 </tr>
+	</table>
+
+	<table align=center width=700px>
+  	 <tr>
+		<td align=center width=100px>
+		<center>
+		<span style="font-size:18px">This Page is Under Construction</span></center>
+		</center>
+		</td>
+	 </tr>
+	</table>
+
+	<table align=center width=500px>
+  	 <tr>
+		<td align=center width=50px>
+		<center>
+		<span style="font-size:18px"><a href="#data">[Data]</a></span>
+		</center>
+		</td>
+
+		<td align=center width=50px>
+		<center>
+		<span style="font-size:18px"><a href="#code">[Code]</a></span>
+		</center>
+		</td>
+
+		<td align=center width=50px>
+		<center>
+		<span style="font-size:18px">MultiMedia 2020 <a href="">[Paper]</a></span>
+		</center>
+		</td>
+	 </tr>
+	</table>
+ 
+  		  <br>
+  		  <table align=center width=900px>
+  			  <tr>
+  	              <td width=600px>
+  					<center>
+  	                	<a href="./images/teaser.png"><img src = "./images/teaser.png" height="400px"></img></href></a><br>
+					</center>
+  	              </td>
+  	          </tr>
+  		  </table>
+
+      	  <br>
+      	  <p style="text-align:justify">
+          	 Action recognition is a relatively established task, where given an input sequence of human motion, the goal is to predict its action category. This paper, on the other hand, considers a relatively new problem, which could be thought of as an inverse of action recognition: given a prescribed action type, we aim to generate plausible human motion sequences in 3D. Importantly, the set of generated motions are expected to maintain its diversity to be able to explore the entire action-conditioned motion space; meanwhile, each sampled sequence faithfully resembles a natural human body articulation dynamics. Motivated by these objectives, we follow the physics law of human kinematics by adopting the Lie Algebra theory to represent the natural human motions; we also propose a temporal Variational Auto-Encoder (VAE) that encourages a diverse sampling of the motion space. A new 3D human motion dataset, HumanAct12, is also constructed. Empirical experiments over three distinct human motion datasets (including ours) demonstrate the effectiveness of our approach.
+      	  </p>
+
+
+		  <hr>
+		 <!-- <table align=center width=550px> -->
+  		  <table align=center width=1100>
+	 		<center><h1>Paper</h1></center>
+  			  <!-- <tr> -->
+  	              <!--<td width=300px align=left>-->
+  	              <!-- <a href="http://arxiv.org/pdf/1603.08511.pdf"> -->
+				  <!-- <td><a href="#"><img class="layered-paper-big" style="height:175px" src="./resources/images/paper.png"/></a></td> -->
+				  <!-- <td><a href="https://arxiv.org/pdf/1808.07371.pdf"><img style="height:180px" src="images/thumbnail.jpeg"/></a></td> -->
+				  <!-- /*<td><span style="font-size:14pt">Everybody Dance Now<br>*/ -->
+                          <!-- <i>Caroline Chan, Shiry Ginosar, Tinghui Zhou, Alexei A. Efros</i><br> -->
+				  <!-- ICCV, 2019<br> -->
+				  <!-- [hosted on <a href="https://arxiv.org/pdf/1808.07371.pdf">arXiv</a>]</a> -->
+				  <!-- </td> -->
+  	              <!-- </td> -->
+              <!-- </tr> -->
+  		  </table>
+		  <br>
+
+		  <table align=center width=400px>
+			  <tr>
+				  <td><span style="font-size:14pt"><center>
+				  	<!-- <a href="https://arxiv.org/pdf/1808.07371.pdf">[PDF]</a> -->
+  	              </center></td>
+
+				  <td><span style="font-size:14pt"><center>
+				  	<!-- <a href="./bibtex.txt">[Bibtex]</a> -->
+  	              </center></td>
+              </tr>
+  		  </table>
+		  	<br>
+
+  		  	<hr>
+			<center><h1>Videos</h1>
+
+			<table align=center width=800px>
+				<tr height="300px">
+					<td valign="top" width=400px>
+					<center>
+						<br><span style="font-size:20px">Demo</span></br>
+					<!-- <iframe width="640" height="360" src="https://www.youtube.com/embed/PCBTZh41Ris" frameborder="0" allowfullscreen></iframe> -->
+					</center>
+					</td>
+				</tr>
+				<tr height="300px">
+
+					<td valign="top" width=400px>
+					<center>
+						<span style="font-size:20px">Comparison to Ablations and Baselines</span>
+					<!-- <iframe width="640" height="360" src="https://www.youtube.com/embed/sQD0WVS0blg" frameborder="0" allowfullscreen></iframe> -->
+					</center>
+					</td>
+
+				</tr>
+			</table>
+			</center>
+		<br>
+	  
+	  	<hr>
+
+		 <!-- <table align=center width=550px> -->
+	 	<div id='data'>
+  		  <table align=center width=1100>
+	 		<center><h1>Data</h1></center>
+
+	 		  <tr> <center><img src = "./images/trainsubjects.png" height="140px"></img> </center></tr>
+  			  <tr>
+  			  	<td width='400px'>
+  			  	<p style="text-align:justify">
+  	              <!-- We present a two-part dataset: First, long single-dancer videos that can be used to train and evaluate our model. All subjects have consented to allowing the data to be used for research purposes. We specifically designate the single-dancer data to be high-resolution open-source data for training motion transfer and video generation methods. We release a large collection of short YouTube videos we used for transfer and fake detection. Download our dataset <a href="https://drive.google.com/drive/folders/1rvhzpitXWEN27RD528072mKZ-oyQcyek?usp=sharing"> here</a>.  -->
+  	          	</p>
+				</td>
+              </tr>
+  		  </table>
+  		 </div>
+		  <br>
+
+
+		<hr>
+
+		<div id='code'>
+  		  <table align=center width=1100>
+	 		<center><h1>Code</h1></center>
+
+	 		  <tr> <center>
+	 		  	<p style="text-align:justify">
+	 		  		<!-- Code and models are available for research purposes only by contacting the authors at dancecode [at] berkeley [dot] edu. -->
+	 		  	</p>
+	 		  </center></tr>
+  			  	
+  		  </table>
+  		 </div>
+		  <br>
+
+
+		<hr>
+
+  		  <div id='poster'>
+  		  <table align=center width=1100>
+	 		<center><h1>Poster</h1></center>
+
+	 		  <tr> <center>
+	 		  	<a href='https://drive.google.com/file/d/1FTzcZ5vIMG6r8JTH0vAUHr5GgR9qEmNd/view?usp=sharing'>
+	 		  	<img src = "./images/iccvposter_teaser.jpeg" height="500px"></img>
+	 		  </a>
+	 		  </center></tr>
+
+	 		  <tr>
+  			  	<td width='400px'>
+  			  		<center>
+  			  		<span style="font-size:18px"><a href="https://drive.google.com/file/d/1FTzcZ5vIMG6r8JTH0vAUHr5GgR9qEmNd/view?usp=sharing">[PDF]</a></span>
+  			  	</center>
+				</td>
+              </tr>
+  			  	
+  		  </table>
+  		 </div>
+
+  		 <br>
+  		 <hr>
+
+  		  <table align=center width=1100px>
+  			  <tr>
+  	              <td>
+  					<left>
+	  		  <center><h1>Acknowledgements</h1></center>
+	  		  This work is supported by the University of Alberta Start-up grant, the NSERC Discovery Grant (No. RGPIN-2019-04575), and the University of Alberta-Huawei Joint Innovation Collaboration grants.  This webpage template was borrowed from <a href="https://richzhang.github.io/colorization/">here</a>.
+
+			</left>
+		</td>
+		</tr>
+		</table>
+		<br><br>
+
+		<hr>
+		<p class='small'>
+  		  	<!-- <br><sup>*</sup>C. Chan is currently a graduate student at MIT CSAIL.</br> -->
+  		  	<br><sup>*</sup>Q. Sun and A. Deng did this project during their internship at UoA</br>
+  		  </p>
+</body>
+</html>
