@@ -251,39 +251,28 @@
 
 
 		  <hr>
+		  <div id=paper>
 		 <!-- <table align=center width=550px> -->
   		  <table align=center width=1100>
 	 		<center><h1>Paper</h1></center>
   			  <tr>
-  	              <td width=100px align=left>
-  	              <!-- <a href="http://arxiv.org/pdf/1603.08511.pdf"> -->
-				  <!-- <td><a href="#"><img class="layered-paper-big" style="height:175px" src="./resources/images/paper.png"/></a></td> -->
-				  <td><a href="#"><img style="height:180px" src="./website/paper.png"/></a></td>
-				  <td width=10px align=left>
+  			  		<td width=50px align=left></td>
+				  <td><a href="https://arxiv.org/pdf/2007.15240.pdf"><img style="height:180px" src="./website/paper.png"/></a></td>
+				  <td width=10px align=left></td>
 				  <td><span style="font-size:14pt">Action2Motion: Conditioned Generation of 3D Human Motions<br>
                           <i>Chuan Guo, Xinxin Zuo, Sen Wang, Shihao Zou, Qingyao Sun, Annan Deng, Minglun Gong, Li Cheng</i><br>
 				  ACM MultiMedia, 2020<br>
+				  <br>
 				  <a href="https://arxiv.org/pdf/2007.15240.pdf">[Paper]</a>
 				  &nbsp; &nbsp;
                    		 <a href="#">[Bibtex]</a>
+                   		 </span>
 				  </td>
-  	              </td>
+
               </tr>
   		  </table>
+
 		  <br>
-
-		  <table align=center width=400px>
-			  <tr>
-				  <td><span style="font-size:14pt"><center>
-				  	<!-- <a href="https://arxiv.org/pdf/1808.07371.pdf">[PDF]</a> -->
-  	              </center></td>
-
-				  <td><span style="font-size:14pt"><center>
-				  	<!-- <a href="./bibtex.txt">[Bibtex]</a> -->
-  	              </center></td>
-              </tr>
-  		  </table>
-		  	<br>
 
   		  	<hr>
 			<center><h1>Demo Video</h1>
@@ -302,41 +291,74 @@
 	  
 	  	<hr>
 
+	  </span>
+	</td>
+	</div>
+
 		 <!-- <table align=center width=550px> -->
 	 	<div id='data'>
-  		  <table align=center width=1100>
 	 		<center><h1>Data</h1></center>
+	 		Our work engages in three human motion datasets. Firstly, our own in-house dataset HumanAct12 is built with both coarse-grained and fine-grained action categories; other two existing datasets(i.e. NTU-RGB, CMU Mocap) are adjusted to better fit our purpose. If you're using our dataset, we'd appreciate your citation of our <a href="#paper"> work</a>
+  		  	
+  		  	<table align=center width=1000>
+	 			<center><h3>HumanAct12</h3></center>
+	 	  		<tr>
+	  			  	<td width='400px'>
+	  			  	<p style="text-align:justify">
+	  	              HumanAct12 is adopted from the polar image and 3D pose dataset <a href="https://jimmyzou.github.io/publication/2020-PHSPDataset"> PHSPD</a>, with proper temporal cropping and action annotating. Statistically, there are 1191 3D motion clips(and 90,099 poses in total) which are categorized into 12 action classes, and 34 fine-grained sub-classes. The action types includes our daily actions such as <i>walk, run, sit down, jump up, warm up, </i>etc. Fine-grained action types contain more specifical information like <i>Warm up by bowing left side, Warm up by pressing left leg, etc</i>. The detailed statistics of HumanAct12 could be referred to our paper or documents in the dataset link. Our dataset also is registered with PHSPD dataset, in case one also needs extra meta-source(e.g. polar image, depth image, color image, etc); please see the <i>ReadMe</i> file for detailed registration information. If you're only intereted in 3d joints and action annoataion of human motion, you could just download our dataset <a href="https://drive.google.com/drive/folders/1rvhzpitXWEN27RD528072mKZ-oyQcyek?usp=sharing"> here</a>. If you require more dedicated data modality, you may need to consider <a href="https://jimmyzou.github.io/publication/2020-PHSPDataset"> PHSPD</a> as well. 
+	  	          	</p>
+					</td>
+					<br>
+	            </tr>
+	        </table>
 
-	 		  <tr> <center><img src = "./images/trainsubjects.png" height="140px"></img> </center></tr>
-  			  <tr>
-  			  	<td width='400px'>
-  			  	<p style="text-align:justify">
-  	              <!-- We present a two-part dataset: First, long single-dancer videos that can be used to train and evaluate our model. All subjects have consented to allowing the data to be used for research purposes. We specifically designate the single-dancer data to be high-resolution open-source data for training motion transfer and video generation methods. We release a large collection of short YouTube videos we used for transfer and fake detection. Download our dataset <a href="https://drive.google.com/drive/folders/1rvhzpitXWEN27RD528072mKZ-oyQcyek?usp=sharing"> here</a>.  -->
-  	          	</p>
-				</td>
-              </tr>
-  		  </table>
+	        <table align=center width=1000> 
+				<center><h3>Refined NTU-RGBD</h3></center>
+	          	<tr>
+				  	<td width='400px'>
+				  	<p style="text-align:justify">
+		              We present a two-part dataset: First, long single-dancer videos that can be used to train and evaluate our model. All subjects have consented to allowing the data to be used for research purposes. We specifically designate the single-dancer data to be high-resolution open-source data for training motion transfer and video generation methods. We release a large collection of short YouTube videos we used for transfer and fake detection. Download our dataset <a href="https://drive.google.com/drive/folders/1rvhzpitXWEN27RD528072mKZ-oyQcyek?usp=sharing"> here</a>. 
+		          	</p>
+					</td>
+					<br>
+	          	</tr>
+	        </table>
+
+
+	        
+	        <table align=center width=1000> 
+	        	<center><h3>CMU Mocap</h3></center>
+   	            <tr>
+				  	<td width='400px'>
+				  	<p style="text-align:justify">
+		              We present a two-part dataset: First, long single-dancer videos that can be used to train and evaluate our model. All subjects have consented to allowing the data to be used for research purposes. We specifically designate the single-dancer data to be high-resolution open-source data for training motion transfer and video generation methods. We release a large collection of short YouTube videos we used for transfer and fake detection. Download our dataset <a href="https://drive.google.com/drive/folders/1rvhzpitXWEN27RD528072mKZ-oyQcyek?usp=sharing"> here</a>. 
+		          	</p>
+					</td>
+					<br>
+	            </tr>
+	        </table>
   		 </div>
 		  <br>
 
 
 		<hr>
 
-		<center><h1>Code</h1></center>
+	<div id='code'>
+		<center><h1>Try Our Code</h1></center>
   		  <table align=center width=1100>
 			<tr><center>
                           <a href='https://github.com/EricGuo5513/action-to-motion'><img class="round" style="height:400" src="./website/Architecture.jpg"/></a>
                         </center></tr>
           	  </table>
 
-            	  <table align=center width=800px>
-              		<tr><center> <br>
-                	<span style="font-size:28px">&nbsp;<a href='https://github.com/shunsukesaito/PIFu'>[GitHub]</a>
-                  
-                	<span style="font-size:28px"></a></span>
-              	<br>
-              	</center></tr>
-          	</table>
+    	  <table align=center width=800px>
+      		<tr><center> <br>
+        	<span style="font-size:28px">&nbsp;<a href='https://github.com/EricGuo5513/action-to-motion'>[GitHub]</a>
+          
+        	<span style="font-size:28px"></a></span>
+      		<br>
+      		</center></tr>
+  		  </table>
 	 		
   			  	
   		 </div>
@@ -345,9 +367,10 @@
 
 		<hr>
 
-  		  <div id='poster'>
+  		 
+	<div id='more results'>
   		  <table align=center width=1100>
-	 		<center><h1>Poster</h1></center>
+	 		<center><h1>More Results</h1></center>
 
 	 		  <tr> <center>
 	 		  	<a href='https://drive.google.com/file/d/1FTzcZ5vIMG6r8JTH0vAUHr5GgR9qEmNd/view?usp=sharing'>
@@ -368,7 +391,6 @@
 
   		 <br>
   		 <hr>
-
   		  <table align=center width=1100px>
   			  <tr>
   	              <td>
@@ -377,8 +399,8 @@
 	  		  This work is supported by the University of Alberta Start-up grant, the NSERC Discovery Grants including No. RGPIN-2019-04575, and the University of Alberta-Huawei Joint Innovation Collaboration grants.  This webpage template was borrowed from <a href="https://richzhang.github.io/colorization/">here</a>.
 
 			</left>
-		</td>
-		</tr>
+				</td>
+			</tr>
 		</table>
 		<br><br>
 
