@@ -298,14 +298,14 @@
 		 <!-- <table align=center width=550px> -->
 	 	<div id='data'>
 	 		<center><h1>Data</h1></center>
-	 		Our work engages in three human motion datasets. Firstly, our own in-house dataset HumanAct12 is built with both coarse-grained and fine-grained action categories; other two existing datasets(i.e. NTU-RGB, CMU Mocap) are adjusted to better fit our purpose. If you're using our dataset, we'd appreciate your citation of our <a href="#paper"> work</a>
+	 		Our work engages three human motion datasets. Firstly, our own in-house dataset HumanAct12 is built with both coarse-grained and fine-grained action categories; other two existing datasets(i.e. NTU-RGB, CMU Mocap) are adjusted to better fit our purpose. If you're using our dataset, we'd appreciate your citation of our <a href="#paper"> work</a>
   		  	
   		  	<table align=center width=1000>
 	 			<center><h3>HumanAct12</h3></center>
 	 	  		<tr>
 	  			  	<td width='400px'>
 	  			  	<p style="text-align:justify">
-	  	              HumanAct12 is adopted from the polar image and 3D pose dataset <a href="https://jimmyzou.github.io/publication/2020-PHSPDataset"> PHSPD</a>, with proper temporal cropping and action annotating. Statistically, there are 1191 3D motion clips(and 90,099 poses in total) which are categorized into 12 action classes, and 34 fine-grained sub-classes. The action types includes our daily actions such as <i>walk, run, sit down, jump up, warm up, </i>etc. Fine-grained action types contain more specifical information like <i>Warm up by bowing left side, Warm up by pressing left leg, etc</i>. The detailed statistics of HumanAct12 could be referred to our paper or documents in the dataset link. Our dataset also is registered with PHSPD dataset, in case one also needs extra meta-source(e.g. polar image, depth image, color image, etc); please see the <i>ReadMe</i> file for detailed registration information. If you're only intereted in 3d joints and action annoataion of human motion, you could just download our dataset <a href="https://drive.google.com/drive/folders/1rvhzpitXWEN27RD528072mKZ-oyQcyek?usp=sharing"> here</a>. If you require more dedicated data modality, you may need to consider <a href="https://jimmyzou.github.io/publication/2020-PHSPDataset"> PHSPD</a> as well. 
+	  	              HumanAct12 is adopted from the polar image and 3D pose dataset <a href="https://jimmyzou.github.io/publication/2020-PHSPDataset"> PHSPD</a>, with proper temporal cropping and action annotating. Statistically, there are 1191 3D motion clips(and 90,099 poses in total) which are categorized into 12 action classes, and 34 fine-grained sub-classes. The action types includes our daily actions such as <i>walk, run, sit down, jump up, warm up, </i>etc. Fine-grained action types contain more specifical information like <i>Warm up by bowing left side, Warm up by pressing left leg, etc</i>. The detailed statistics of HumanAct12 could be referred to our paper or documents in the dataset link. Our dataset also is registered with PHSPD dataset, in case one also needs extra meta-source(e.g. polar image, depth image, color image, etc); please see the <i>ReadMe</i> file for detailed registration information. If you're only intereted in 3d joints and action annoataion of human motion, you could just download our dataset <a href="https://drive.google.com/drive/folders/1hGNkxI9jPbdFueUHfj8H8zC2f7DTb8NG?usp=sharing"> here</a>. If you require more dedicated data modality, you may consider <a href="https://jimmyzou.github.io/publication/2020-PHSPDataset"> PHSPD</a> as well. 
 	  	          	</p>
 					</td>
 					<br>
@@ -317,7 +317,7 @@
 	          	<tr>
 				  	<td width='400px'>
 				  	<p style="text-align:justify">
-		              We present a two-part dataset: First, long single-dancer videos that can be used to train and evaluate our model. All subjects have consented to allowing the data to be used for research purposes. We specifically designate the single-dancer data to be high-resolution open-source data for training motion transfer and video generation methods. We release a large collection of short YouTube videos we used for transfer and fake detection. Download our dataset <a href="https://drive.google.com/drive/folders/1rvhzpitXWEN27RD528072mKZ-oyQcyek?usp=sharing"> here</a>. 
+		              Due to the inaccuracy of 3D joint annoations in original NTU-RGBD dataset, we re-estimate the 3D positions of poses from the point cloud extratcted from rough RGBD videos, by the  recently proposed method <a href="https://github.com/mkocabas/VIBE"> "video inference for human body pose and shape estimation(CVPR 2020)" </a>. Note this dataset is only partial of NTU-RGBD dataset, which contains 13 distinct acition types(e.g. cheer up, pick up, salute, etc.) constituting 3,902 motion clips. We kept the name of each motion as origin. Download <a href="https://drive.google.com/drive/folders/1oaHZBMBne5z_ui7M1Keu3Nx1CD7f141L?usp=sharing"> here</a>
 		          	</p>
 					</td>
 					<br>
@@ -331,7 +331,7 @@
    	            <tr>
 				  	<td width='400px'>
 				  	<p style="text-align:justify">
-		              We present a two-part dataset: First, long single-dancer videos that can be used to train and evaluate our model. All subjects have consented to allowing the data to be used for research purposes. We specifically designate the single-dancer data to be high-resolution open-source data for training motion transfer and video generation methods. We release a large collection of short YouTube videos we used for transfer and fake detection. Download our dataset <a href="https://drive.google.com/drive/folders/1rvhzpitXWEN27RD528072mKZ-oyQcyek?usp=sharing"> here</a>. 
+		              The original CMU Mocap dataset is not orgnized by action types. Based on their motion descriptions, we identify 8 disparate actions, including running, walking, jumping, climbing, and manually re-organize 1,088 motions. Here each skeleton is annotated with 20 3D joints (19 bones). In practice, the pose sequences are down-sampled to a frequency of 12 HZ from 100 HZ. Download <a href="https://drive.google.com/drive/folders/1_2jbZK48Li6sm1duNJnR_eyQjVdJQDoU?usp=sharing"> here</a>
 		          	</p>
 					</td>
 					<br>
