@@ -43,19 +43,19 @@ We train the models using the script `train_motion_vae.py`. All the argments and
 
 - HumanAct12
 ```sh
-python train_motion_vae.py --name <Experiment_name> --dataset_type humanact12 --batch_size 128 --motion_length 60 --coarse_grained --lambda_kld 0.001 --eval_every 50 --plot_every 50 --print_every 20 --save_every 20 --save_latest 50 --time_counter --use_lie --gpu_id 1 --iters 100
+python train_motion_vae.py --name <Experiment_name> --dataset_type humanact12 --batch_size 128 --motion_length 60 --coarse_grained --lambda_kld 0.001 --eval_every 2000 --plot_every 50 --print_every 20 --save_every 2000 --save_latest 50 --time_counter --use_lie --gpu_id 0 --iters 50000
 ```
 All motions are of length 60.  
 
 - NTU-RGBD
 ```sh
-python train_motion_vae.py --name ntu_vibe_trial --dataset_type ntu_rgbd_vibe  --batch_size 128 --motion_length 60 --lambda_kld 0.01 --eval_every 50 --plot_every 50 --print_every 20 --save_every 20 --save_latest 50 --time_counter --use_lie --gpu_id 1 --iters 100 
+python train_motion_vae.py --name <Experiment_name> --dataset_type ntu_rgbd_vibe  --batch_size 128 --motion_length 60 --lambda_kld 0.01 --eval_every 2000 --plot_every 50 --print_every 20 --save_every 2000 --save_latest 50 --time_counter --use_lie --gpu_id 0 --iters 50000 
 ```
 All motions are of length 60.  
 
 - CMU Mocap
 ```sh
-python train_motion_vae.py --name mocap_trial --dataset_type mocap  --batch_size 128 --motion_length 100 --lambda_kld 0.01 --eval_every 50 --plot_every 50 --print_every 20 --save_every 20 --save_latest 50 --time_counter --use_lie --gpu_id 1 --iters 100 
+python train_motion_vae.py --name <Experiment_name> --dataset_type mocap  --batch_size 128 --motion_length 100 --lambda_kld 0.01 --eval_every 2000 --plot_every 50 --print_every 20 --save_every 2000 --save_latest 50 --time_counter --use_lie --gpu_id 0 --iters 50000 
 ```
 All motions are of length 100.  
 
@@ -66,27 +66,46 @@ If you are generating results from models with Lie part, you need to download th
 
 The animation results will appear in `eval_results/`
 
+#### Play our model with Lie
+
 - HumanAct12
 ```sh
-python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld001 --dataset_type humanact12 --use_lie --time_counter --motion_length 60 --coarse_grained --gpu_id 2 --replic_times 5 --name_ext _R0
+python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld001 --dataset_type humanact12 --use_lie --time_counter --motion_length 60 --coarse_grained --gpu_id 0 --replic_times 5 --name_ext _R0
+```
+
+- NTU-RGBD
+```sh
+python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type ntu_rgbd_vibe --use_lie --time_counter --motion_length 60 --gpu_id 0 --replic_times 5 --name_ext R0 
+```
+
+- CMU Mocap
+```sh
+python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type mocap --use_lie --time_counter --motion_length 60 --gpu_id 0 --replic_times 5 --name_ext R0 
+```
+
+#### Play our model without Lie
+
+- HumanAct12
+```sh
+python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld001 --dataset_type humanact12 --time_counter --motion_length 60 --coarse_grained --gpu_id 0 --replic_times 5 --name_ext _R0
 ```
 All motions are of length 60.  
 
 - NTU-RGBD
 ```sh
-python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type ntu_rgbd_vibe --use_lie --time_counter --motion_length 60 --gpu_id 2 --replic_times 5 --name_ext R0 
+python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type ntu_rgbd_vibe --use_lie --time_counter --motion_length 60 --gpu_id 0 --replic_times 5 --name_ext R0 
 ```
 All motions are of length 60.  
 
 - CMU Mocap
 ```sh
-python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type mocap --use_lie --time_counter --motion_length 60 --gpu_id 2 --replic_times 5 --name_ext R0 
+python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type mocap --use_lie --time_counter --motion_length 60 --gpu_id 0 --replic_times 5 --name_ext R0 
 ```
 You could change the argument `replic_times` to get more generated motions. If you're testing the model you trained by you own, please replace the argument `name` with the name of checkpoint model you want to test.
 
 ---
 #### Citation
-If you find this model useful for you research, please consider citing [our work](https://ericguo5513.github.io/action-to-motion/).
+If you find this model or datasets useful for you research, please consider citing [our work](https://ericguo5513.github.io/action-to-motion/).
 
 #### Misc
 Contact Chuan Guo at cguo2 at ualberta.ca for any questions or comments
