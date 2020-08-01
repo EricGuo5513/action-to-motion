@@ -43,19 +43,19 @@ We train the models using the script `train_motion_vae.py`. All the argments and
 
 - HumanAct12
 ```sh
-command
+python train_motion_vae.py --name <Experiment_name> --dataset_type humanact12 --batch_size 128 --motion_length 60 --coarse_grained --lambda_kld 0.001 --eval_every 50 --plot_every 50 --print_every 20 --save_every 20 --save_latest 50 --time_counter --use_lie --gpu_id 1 --iters 100
 ```
 All motions are of length 60.  
 
 - NTU-RGBD
 ```sh
-command
+python train_motion_vae.py --name ntu_vibe_trial --dataset_type ntu_rgbd_vibe  --batch_size 128 --motion_length 60 --lambda_kld 0.01 --eval_every 50 --plot_every 50 --print_every 20 --save_every 20 --save_latest 50 --time_counter --use_lie --gpu_id 1 --iters 100 
 ```
 All motions are of length 60.  
 
 - CMU Mocap
 ```sh
-command
+python train_motion_vae.py --name mocap_trial --dataset_type mocap  --batch_size 128 --motion_length 100 --lambda_kld 0.01 --eval_every 50 --plot_every 50 --print_every 20 --save_every 20 --save_latest 50 --time_counter --use_lie --gpu_id 1 --iters 100 
 ```
 All motions are of length 100.  
 
@@ -68,19 +68,19 @@ The animation results will appear in `eval_results/`
 
 - HumanAct12
 ```sh
-command
+python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld001 --dataset_type humanact12 --use_lie --time_counter --motion_length 60 --coarse_grained --gpu_id 2 --replic_times 5 --name_ext _R0
 ```
 All motions are of length 60.  
 
 - NTU-RGBD
 ```sh
-command
+python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type ntu_rgbd_vibe --use_lie --time_counter --motion_length 60 --gpu_id 2 --replic_times 5 --name_ext R0 
 ```
 All motions are of length 60.  
 
 - CMU Mocap
 ```sh
-command
+python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type mocap --use_lie --time_counter --motion_length 60 --gpu_id 2 --replic_times 5 --name_ext R0 
 ```
 You could change the argument `replic_times` to get more generated motions. If you're testing the model you trained by you own, please replace the argument `name` with the name of checkpoint model you want to test.
 
