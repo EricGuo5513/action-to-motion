@@ -62,7 +62,7 @@ All motions are of length 100.
 Model files and intermediate data will be stored in `./checkpoints`
 
 ### Test and Animation
-If you are generating results from models with Lie part, you need to download the corresponding datasets and place them in`/dataset`. Because our model need to sample skeletons from real human datasets.
+**If you are generating results from models with Lie part, you need to download the corresponding datasets and place them in`/dataset`.** Because our model need to sample skeletons from real human datasets.
 
 The animation results will appear in `eval_results/`
 
