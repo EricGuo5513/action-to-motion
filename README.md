@@ -87,19 +87,16 @@ python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type mo
 
 - HumanAct12
 ```sh
-python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld001 --dataset_type humanact12 --time_counter --motion_length 60 --coarse_grained --gpu_id 0 --replic_times 5 --name_ext _R0
-```
-All motions are of length 60.  
+python evaluate_motion_vae.py --name vanila_vae_tf --dataset_type humanact12  --motion_length 60 --coarse_grained --gpu_id 0 --replic_times 5 --name_ext R0
 
+```
 - NTU-RGBD
 ```sh
-python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type ntu_rgbd_vibe --use_lie --time_counter --motion_length 60 --gpu_id 0 --replic_times 5 --name_ext R0 
+python evaluate_motion_vae.py --name vanila_vae_tf_2 --dataset_type ntu-rgbd-vibe  --motion_length 60 --gpu_id 2 --replic_times 2 --name_ext R0 
 ```
-All motions are of length 60.  
-
 - CMU Mocap
 ```sh
-python evaluate_motion_vae.py --name vanilla_vae_lie_mse_kld01 --dataset_type mocap --use_lie --time_counter --motion_length 60 --gpu_id 0 --replic_times 5 --name_ext R0 
+python evaluate_motion_vae.py --name vanila_vae_tf_2 --dataset_type mocap  --motion_length 100 --gpu_id 2 --replic_times 2 --name_ext R0 
 ```
 You could change the argument `replic_times` to get more generated motions. If you're testing the model you trained by you own, please replace the argument `name` with the name of checkpoint model you want to test.
 
