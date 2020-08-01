@@ -102,7 +102,7 @@ You could change the argument `replic_times` to get more generated motions. If y
 
 ---
 #### Citation
-If you find this model or datasets useful for you research, please consider citing [our work](https://ericguo5513.github.io/action-to-motion/).
+If you find this model or datasets useful for you research, please consider citing [our work](https://github.com/EricGuo5513/action-to-motion/blob/master/website/bibtex.txt).
 
 #### Misc
 Contact Chuan Guo at cguo2 at ualberta.ca for any questions or comments
