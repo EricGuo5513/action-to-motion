@@ -102,15 +102,7 @@ You could change the argument `replic_times` to get more generated motions. If y
 
 ---
 #### Citation
-If you find this model or datasets useful for you research, please consider citing our work.
-```sh
-@inproceedings{chuan2020action2motion,  
-  title={Action2Motion: Conditioned Generation of 3D Human Motions},  
-  author={Chuan Guo and Xinxin Zuo and Sen Wang and Shihao Zou and Qingyao Sun and Annan Deng and Minglun Gong and Li Cheng},
-  booktitle={Proceedings of the 28th ACM International Conference on Multimedia (MM '20)},  
-  year={2020}  
-}
-```
+If you find this model or datasets useful for you research, please consider citing our [work](https://ericguo5513.github.io/action-to-motion/website/bibtex.txt).
 
 #### Misc
 Contact Chuan Guo at cguo2 at ualberta.ca for any questions or comments
