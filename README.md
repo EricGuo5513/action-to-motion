@@ -68,7 +68,7 @@ All motions are of length 100.
 Model files and intermediate data will be stored in `./checkpoints`
 
 ### Test and Animation
-**If you are generating results from models with Lie part, you need to download the corresponding datasets and place them in`/dataset`.** Because our model need to sample skeletons from real human datasets.
+**If you are generating results from models with Lie representation, you need to download the corresponding datasets and place them in`/dataset`.** Because our model need to sample skeletons from real human datasets.
 
 The animation results will appear in `eval_results/`
 
@@ -98,13 +98,13 @@ python evaluate_motion_vae.py --name vanila_vae_tf --dataset_type humanact12  --
 ```
 - NTU-RGBD
 ```sh
-python evaluate_motion_vae.py --name vanila_vae_tf_2 --dataset_type ntu-rgbd-vibe  --motion_length 60 --gpu_id 2 --replic_times 2 --name_ext R0 
+python evaluate_motion_vae.py --name vanila_vae_tf_2 --dataset_type ntu-rgbd-vibe  --motion_length 60 --gpu_id 0 --replic_times 2 --name_ext R0 
 ```
 - CMU Mocap
 ```sh
-python evaluate_motion_vae.py --name vanila_vae_tf_2 --dataset_type mocap  --motion_length 100 --gpu_id 2 --replic_times 2 --name_ext R0 
+python evaluate_motion_vae.py --name vanila_vae_tf_2 --dataset_type mocap  --motion_length 100 --gpu_id 0 --replic_times 2 --name_ext R0 
 ```
-You could change the argument `replic_times` to get more generated motions. If you're testing the model you trained by you own, please replace the argument `name` with the name of checkpoint model you want to test.
+You could change the argument `replic_times` to get more generated motions. If you're testing the model you‘ve trained by you own, please replace the argument `name` with the name of checkpoint model you want to test.
 
 ---
 #### Citation
