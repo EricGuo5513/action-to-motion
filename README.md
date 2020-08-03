@@ -25,6 +25,8 @@ We use three datasets and they are: `HumanAct12`, `NTU-RGBD` and `CMU Mocap`. Al
 
 **If you just want to play our pre-trained models without Lie version, you don't need to download datasets.**
 
+New a folder for dataset
+
 ```sh
 mkdir ./dataset/
 ```
