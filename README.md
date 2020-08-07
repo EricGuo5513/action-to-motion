@@ -21,11 +21,11 @@ source activate torch-action2pose
 ----
 ### Data & Pre-trained Models
 
-We use three datasets and they are: `HumanAct12`, `NTU-RGBD` and `CMU Mocap`. All datasets have been properly pre-transformed to better fit our purpose. Details could are provided in our project [webpage](https://ericguo5513.github.io/action-to-motion/) or dataset documents. 
+We use three datasets and they are: `HumanAct12`, `NTU-RGBD` and `CMU Mocap`. All datasets have been properly pre-transformed to better fit our purpose. Details are provided in our project [webpage](https://ericguo5513.github.io/action-to-motion/) or dataset documents. 
 
 **If you just want to play our pre-trained models without Lie version, you don't need to download datasets.**
 
-New a folder for dataset
+Create a folder for dataset
 
 ```sh
 mkdir ./dataset/
