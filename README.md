@@ -1,7 +1,20 @@
 ## <b>Action2Motion: Conditioned Generation of 3D Human Motions</b> 
 ### [[Project Page]](https://ericguo5513.github.io/action-to-motion/)  [[Paper]](https://arxiv.org/pdf/2007.15240.pdf)<br>
 
+## Updates: add evaluation related files & scripts  
+The **motion feature extractor** & **core evaluation implementation** is updated to reproduce our evaluation metrics.  
 
+#### Action classifier models
+* Motion feature extractors are pre-trained action classifier, they are in ./model_file  
+
+#### Scripts
+All other evaluation implementations are in ./eval_scripts
+* Use **load_classifier.py** to load pre-trained model for calculating accuracy and FID. Parameter **input_size_raw** is equal to joint_num*3. 
+* **final_evaluation.py** is the core file calculating the four metrics.  
+* Remember to import **fid.py** in final_evaluation.py. 
+Note the evaluation files are not directly runnable. But you should be able to reproduce our metrics with them.
+
+----
 There are 4 steps to run this code
 * Python Virtual Environment and dependencies
 * Data download and preprocessing
