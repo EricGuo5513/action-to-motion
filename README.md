@@ -10,7 +10,8 @@
 All other evaluation implementations are in ./eval_scripts
 * Use **load_classifier.py** to load pre-trained models for calculating accuracy and FID. Argument **input_size_raw** is equal to joint_num*3. 
 * **final_evaluation.py** is the core file calculating the four metrics.  
-* Remember to import **fid.py** in final_evaluation.py.   
+* Remember to import **fid.py** in final_evaluation.py. 
+
 Note the evaluation files are not directly runnable. But you should be able to reproduce our metrics with minor re-editting on them.
 
 ----
