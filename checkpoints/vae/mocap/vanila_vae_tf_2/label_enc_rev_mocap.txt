@@ -1,0 +1,8 @@
+(0, 'Walk')
+(1, 'Wash')
+(2, 'Run')
+(3, 'Jump')
+(4, 'Animal Behavior')
+(5, 'Dance')
+(6, 'Step')
+(7, 'Climb')

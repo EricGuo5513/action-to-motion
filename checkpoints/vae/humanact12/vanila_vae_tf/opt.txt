@@ -1,0 +1,37 @@
+------------ Options -------------
+arbitrary_len: False
+batch_size: 128
+checkpoints_dir: ./checkpoints/vae
+clip_set: ./dataset/pose_clip_full.csv
+coarse_grained: True
+d_hidden_layers: 2
+dataset_type: humanact12
+decoder_hidden_layers: 2
+dim_z: 30
+do_adversary: False
+do_align: False
+do_recognition: False
+eval_every: 10000
+gpu_id: 3
+hidden_size: 128
+isTrain: True
+is_continue: False
+iters: 500000
+lambda_adversary: 0.5
+lambda_align: 0.5
+lambda_kld: 0.0001
+lambda_recognition: 0.5
+lie_enforce: False
+motion_length: 60
+name: vanila_vae_tf
+no_trajectory: False
+plot_every: 500
+posterior_hidden_layers: 1
+print_every: 100
+prior_hidden_layers: 1
+save_every: 10000
+save_latest: 500
+skip_prob: 0
+tf_ratio: 0.6
+time_counter: False
+-------------- End ----------------
