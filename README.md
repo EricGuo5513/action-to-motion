@@ -1,7 +1,7 @@
 ## <b>Action2Motion: Conditioned Generation of 3D Human Motions</b> 
 ### [[Project Page]](https://ericguo5513.github.io/action-to-motion/)  [[Paper]](https://arxiv.org/pdf/2007.15240.pdf)<br>
 
-### [2020/01/12] Updates: add evaluation related files & scripts  
+### [2021/01/12] Updates: add evaluation related files & scripts  
 
 #### Action classifier models
 * Motion feature extractors are pre-trained action classifiers, they are in ./model_file  
