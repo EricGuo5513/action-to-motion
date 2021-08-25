@@ -14,6 +14,8 @@ All other evaluation implementations are in ./eval_scripts
 
 Note the evaluation files are not directly runnable. But you should be able to reproduce our metrics with minor re-editting on them.
 
+The codes of Dataloaders & Datasets could be found in this repo https://github.com/EricGuo5513/action2motion/tree/master/motion_loaders as reference.
+
 ----
 There are 4 steps to run this code
 * Python Virtual Environment and dependencies
