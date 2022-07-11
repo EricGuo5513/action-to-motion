@@ -1,6 +1,7 @@
-@inproceedings{chuan2020action2motion,  
-  title={Action2Motion: Conditioned Generation of 3D Human Motions},  
-  author={Chuan Guo and Xinxin Zuo and Sen Wang and Shihao Zou and Qingyao Sun and Annan Deng and Minglun Gong and Li Cheng},
-  booktitle={Proceedings of the 28th ACM International Conference on Multimedia (MM '20)},  
-  year={2020}  
+@inproceedings{guo2020action2motion,
+  title={Action2motion: Conditioned generation of 3d human motions},
+  author={Guo, Chuan and Zuo, Xinxin and Wang, Sen and Zou, Shihao and Sun, Qingyao and Deng, Annan and Gong, Minglun and Cheng, Li},
+  booktitle={Proceedings of the 28th ACM International Conference on Multimedia},
+  pages={2021--2029},
+  year={2020}
 }
