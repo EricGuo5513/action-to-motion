@@ -47,13 +47,13 @@ mkdir ./dataset/
 ```
 
 #### Download HumanAct12 Dataset
-If you'd like to use HumanAct12 dataset, download the data folder [here](https://drive.google.com/drive/folders/1hGNkxI9jPbdFueUHfj8H8zC2f7DTb8NG?usp=sharing), and place it in `dataset/`
+If you'd like to use HumanAct12 dataset, download the data folder [here](https://drive.google.com/drive/folders/1TBY2x-gD6f3yzQ0WNmXP2-be3xu3qDkV?usp=sharing), and place it in `dataset/`
 
 #### Download NTU-RGBD Dataset
-If you'd like to use NTU-RGBD dataset, download the data folder [here](https://drive.google.com/drive/folders/1oaHZBMBne5z_ui7M1Keu3Nx1CD7f141L?usp=sharing), and place it in `dataset/`
+If you'd like to use NTU-RGBD dataset, download the data folder [here](https://drive.google.com/drive/folders/16drEWHjxOHXWtbTvLeQyaXAjIYa-rMoz?usp=sharing), and place it in `dataset/`
 
 #### Download CMU Mocap Dataset
-If you'd like to use CMU-Mocap dataset, download the data folder [here](https://drive.google.com/drive/folders/1_2jbZK48Li6sm1duNJnR_eyQjVdJQDoU?usp=sharing), and place it in `dataset/`
+If you'd like to use CMU-Mocap dataset, download the data folder [here](https://drive.google.com/drive/folders/1nJUF-qFG9vFDIWirrNmpedgZSfJnBAaf?usp=sharing), and place it in `dataset/`
 
 Our pre-trained models have been involved in folder `checkpoints/`. You don't need to download them additionally.  
 
